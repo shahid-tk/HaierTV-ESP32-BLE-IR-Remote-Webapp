@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Haier TV BLE IR Remote">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>Haier BLE Remote</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>Haier Remote</h1>
+        <span id="connectionText" class="status disconnected">Disconnected</span>
+      </div>
+      <button id="connectBtn" class="connect">Connect BLE</button>
+    </header>
+
+    <section class="remote" aria-label="TV remote">
+      <div class="remote-top">
+        <button class="power" data-cmd="NEC:04:08" aria-label="Power">⏻</button>
+      </div>
+
+      <div class="quick-row">
+        <button data-cmd="NEC:04:0B">SOURCE</button>
+        <button data-cmd="NEC:04:09">MUTE</button>
+      </div>
+
+      <div class="rocker-row">
+        <div class="rocker">
+          <button data-cmd="NEC:04:02">VOL +</button>
+          <div class="rocker-label">VOLUME</div>
+          <button data-cmd="NEC:04:03">VOL −</button>
+        </div>
+        <div class="rocker">
+          <button data-cmd="NEC:04:00">CH +</button>
+          <div class="rocker-label">CHANNEL</div>
+          <button data-cmd="NEC:04:01">CH −</button>
+        </div>
+      </div>
+
+      <section class="nav" aria-label="Navigation">
+        <button class="nav-up unknown" data-action="unknown" title="Code not identified">▲</button>
+        <div class="nav-middle">
+          <button class="nav-left unknown" data-action="unknown" title="Code not identified">◀</button>
+          <button class="ok unknown" data-action="unknown" title="Code not identified">OK</button>
+          <button class="nav-right unknown" data-action="unknown" title="Code not identified">▶</button>
+        </div>
+        <button class="nav-down unknown" data-action="unknown" title="Code not identified">▼</button>
+      </section>
+
+      <div class="bottom-row">
+        <button class="unknown" data-action="unknown">MENU</button>
+        <button class="unknown" data-action="unknown">BACK</button>
+        <button class="unknown" data-action="unknown">EXIT</button>
+      </div>
+
+      <div class="numeric" aria-label="Numeric keypad">
+        <button class="unknown" data-action="unknown">1</button>
+        <button class="unknown" data-action="unknown">2</button>
+        <button class="unknown" data-action="unknown">3</button>
+        <button class="unknown" data-action="unknown">4</button>
+        <button class="unknown" data-action="unknown">5</button>
+        <button class="unknown" data-action="unknown">6</button>
+        <button class="unknown" data-action="unknown">7</button>
+        <button class="unknown" data-action="unknown">8</button>
+        <button class="unknown" data-action="unknown">9</button>
+        <button class="unknown" data-action="unknown">INFO</button>
+        <button class="unknown" data-action="unknown">0</button>
+        <button class="unknown" data-action="unknown">GUIDE</button>
+      </div>
+    </section>
+
+    <section class="log-panel">
+      <div class="log-head">
+        <strong>Activity</strong>
+        <button id="clearLog">Clear</button>
+      </div>
+      <div id="log" class="log">Ready. Connect the M5-IR-Blaster.</div>
+    </section>
+
+    <p class="install-hint" id="installHint"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{margin:0;background:#080808;color:#f5f5f5;min-height:100vh}
+button{font:inherit;color:inherit;border:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.app{width:min(100%,520px);margin:auto;padding:14px 14px 30px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+h1{font-size:20px;margin:0 0 3px}
+.status{font-size:12px;font-weight:700}
+.connected{color:#63e6be}.disconnected{color:#ff8787}
+.connect{background:#fff;color:#111;padding:11px 15px;border-radius:12px;font-weight:800}
+.remote{background:#151515;border:1px solid #292929;border-radius:28px;padding:20px;box-shadow:0 18px 60px #0008}
+.remote button{background:#242424;border:1px solid #363636;border-radius:15px;min-height:52px;font-weight:750}
+.remote button:active{transform:scale(.96);background:#353535}
+.remote button:disabled{opacity:.42;cursor:not-allowed}
+.remote .unknown{opacity:.48}
+.remote-top{text-align:center;margin-bottom:14px}
+.power{width:72px!important;height:72px;border-radius:50%!important;font-size:34px!important;background:#3a1515!important;color:#ff6b6b!important;border-color:#652525!important}
+.quick-row,.rocker-row,.bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.rocker{display:grid;grid-template-columns:1fr;gap:7px}
+.rocker-label{text-align:center;color:#888;font-size:10px;letter-spacing:1.4px;padding:2px}
+.nav{display:flex;flex-direction:column;align-items:center;gap:7px;margin:18px 0}
+.nav-middle{display:flex;align-items:center;gap:7px}
+.nav button{width:58px;min-height:48px}
+.nav .ok{width:72px;height:72px;border-radius:50%;background:#303030}
+.bottom-row{grid-template-columns:repeat(3,1fr)}
+.numeric{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.numeric button{min-height:46px}
+.log-panel{margin-top:14px;background:#111;border:1px solid #292929;border-radius:16px;padding:12px}
+.log-head{display:flex;justify-content:space-between;font-size:13px}
+#clearLog{background:none;color:#999;font-size:12px;min-height:auto}
+.log{margin-top:8px;color:#aaa;font:12px ui-monospace,SFMono-Regular,Consolas,monospace;min-height:20px;white-space:pre-wrap}
+.install-hint{text-align:center;color:#777;font-size:11px;margin:14px 8px}
+@media(min-width:700px){body{padding-top:25px}}
