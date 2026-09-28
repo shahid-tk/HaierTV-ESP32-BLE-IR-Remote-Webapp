@@ -30,7 +30,7 @@ Navigation, Menu, Back, Exit, numeric keys, Info and Guide are intentionally sho
 1. Create a GitHub repository.
 2. Upload all files in this folder to the repository root.
 3. In **Settings → Pages**, select **Deploy from a branch**, choose `main`, `/ (root)`.
-4. Open the resulting `https://<username>.github.io/<repo>/` URL in a browser that supports Web Bluetooth.
+4. Open the resulting `https://shahid-tk.github.io/HaierTV-ESP32-BLE-IR-Remote-Webapp` URL in a browser that supports Web Bluetooth.
 5. Connect the M5Atom Lite using **Connect BLE**.
 6. Use the remote.
 
